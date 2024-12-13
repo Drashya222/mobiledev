@@ -1,0 +1,35 @@
+---
+layout: layouts/default.ejs
+pagination:
+  data: projectData
+  size: 1
+  alias: post
+  addAllPagesToCollections: true
+permalink: "project/<%= post.slug %>/index.html"
+---
+
+<article class="container">
+  <header>
+    <h1><%= post.title %></h1>
+    <p>By <%= post.author %> on <%= post.publishDate %></p>
+    <p>Tags: 
+        <% if (post.tags && post.tags.length) { %>
+          <% post.tags.forEach((tag, index) => { %>
+            <%= tag.name || tag %><%= index < post.tags.length - 1 ? ", " : "" %>
+          <% }); %>
+        <% } else { %>
+          No Tags
+        <% } %>
+      </p>
+      
+  </header>
+
+  <section>
+    <div class="blog-body">
+      <%- markdownIt.render(post.body) %> 
+    </div>
+  </section>
+  
+</article>
+
+<hr/>

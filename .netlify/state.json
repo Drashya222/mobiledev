@@ -1,0 +1,21 @@
+{
+	"siteId": "9a836402-4351-4757-8b29-5ec9525eb992",
+	"geolocation": {
+		"data": {
+			"city": "Whitby",
+			"country": {
+				"code": "CA",
+				"name": "Canada"
+			},
+			"subdivision": {
+				"code": "ON",
+				"name": "Ontario"
+			},
+			"timezone": "America/Toronto",
+			"latitude": 43.8864,
+			"longitude": -78.9741,
+			"postalCode": "L1P"
+		},
+		"timestamp": 1734029181052
+	}
+}

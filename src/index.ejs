@@ -1,0 +1,132 @@
+---
+layout: layouts/default.ejs
+title: Welcome to My Portfolio
+name: Drashya Patel
+home: "/"
+---
+
+<section class="intro-section text-center py-5">
+  <div class="container">
+    <!-- Main Heading -->
+    <h1 class="display-5 fw-bold text-primary home-pagetitle"><%= title %></h1>
+    <p class="lead text-dark mt-4">
+      Hi! I'm <span class="fw-bold text-primary"><%= name %></span>, and this is my dynamic portfolio website. Here, I combine creativity and technology to showcase my journey in modern web development.
+    </p>
+
+    <!-- Overview -->
+    <p class="fs-5 text-muted mt-3">
+      This project is a culmination of my exploration of <span class="fw-bold text-success">Eleventy (11ty)</span>, 
+      <span class="fw-bold text-success">Contentful CMS</span>, <span class="fw-bold text-success">Netlify</span>, and 
+      <span class="fw-bold text-success">SendGrid</span>. From building dynamic pages to integrating serverless functions, I've leveraged these tools to create a feature-rich, responsive, and engaging website.
+    </p>
+  </div>
+</section>
+
+<!-- Technologies Section -->
+<!-- Technologies Section -->
+<section class="technologies-section py-5 bg-light">
+  <div class="container">
+    <h2 class="text-center text-success mb-5">Technologies I Know</h2>
+    <div class="row justify-content-center">
+      <!-- Flutter -->
+      <div class="col-md-3 text-center">
+        <a href="https://flutter.dev/" target="_blank">
+          <img src="/assets/img/flutter-logo.png" alt="Flutter" class="img-fluid mb-2" style="height: 60px;">
+          <h5 class="text-dark">Flutter</h5>
+        </a>
+      </div>
+      <!-- Java -->
+      <div class="col-md-3 text-center">
+        <a href="https://www.java.com/" target="_blank">
+          <img src="/assets/img/java-logo.png" alt="Java" class="img-fluid mb-2" style="height: 60px;">
+          <h5 class="text-dark">Java</h5>
+        </a>
+      </div>
+      <!-- Kotlin -->
+      <div class="col-md-3 text-center">
+        <a href="https://kotlinlang.org/" target="_blank">
+          <img src="/assets/img/kotlin-logo.png" alt="Kotlin" class="img-fluid mb-2" style="height: 60px;">
+          <h5 class="text-dark">Kotlin</h5>
+        </a>
+      </div>
+      <!-- React Native -->
+      <div class="col-md-3 text-center">
+        <a href="https://reactnative.dev/" target="_blank">
+          <img src="/assets/img/react-native-logo.png" alt="React Native" class="img-fluid mb-2" style="height: 60px;">
+          <h5 class="text-dark">React Native</h5>
+        </a>
+      </div>
+    </div>
+    <div class="row justify-content-center mt-4">
+      <!-- Node.js -->
+      <div class="col-md-3 text-center">
+        <a href="https://nodejs.org/" target="_blank">
+          <img src="/assets/img/nodejs-logo.png" alt="Node.js" class="img-fluid mb-2" style="height: 60px;">
+          <h5 class="text-dark">Node.js</h5>
+        </a>
+      </div>
+      <!-- MySQL -->
+      <div class="col-md-3 text-center">
+        <a href="https://www.mysql.com/" target="_blank">
+          <img src="/assets/img/mysql-logo.png" alt="MySQL" class="img-fluid mb-2" style="height: 60px;">
+          <h5 class="text-dark">MySQL</h5>
+        </a>
+      </div>
+      <!-- AWS -->
+      <div class="col-md-3 text-center">
+        <a href="https://aws.amazon.com/" target="_blank">
+          <img src="/assets/img/aws-logo.png" alt="AWS" class="img-fluid mb-2" style="height: 60px;">
+          <h5 class="text-dark">AWS</h5>
+        </a>
+      </div>
+      <!-- Python -->
+      <div class="col-md-3 text-center">
+        <a href="https://www.python.org/" target="_blank">
+          <img src="/assets/img/python-logo.png" alt="Python" class="img-fluid mb-2" style="height: 60px;">
+          <h5 class="text-dark">Python</h5>
+        </a>
+      </div>
+    </div>
+    <div class="text-center mt-4">
+      <a href="/blog/page-1" class="btn btn-success px-4 py-2">Read My Blog on Technologies I Know 🚀.</a>
+    </div>
+  </div>
+</section>
+
+
+<!-- Projects Section -->
+<section class="projects-section py-5">
+  <div class="container">
+    <h2 class="text-center text-primary mb-5">Projects</h2>
+    <div class="row">
+      <div class="col-md-6 mb-4">
+        <h4 class="text-success">Dynamic Car Listings</h4>
+        <p class="text-dark">
+          Explore the <a href="/cars/page-1/" class="text-decoration-none text-info">Car Listings</a> page where I've dynamically fetched car data from 
+          <span class="fw-bold">Contentful CMS</span>. With pagination, search functionality, and filters by attributes, this section offers an interactive way to browse information.
+        </p>
+      </div>
+      <div class="col-md-6 mb-4">
+        <h4 class="text-success">Blogs & Research</h4>
+        <p class="text-dark">
+          Dive into my <a href="/blog/page-1" class="text-decoration-none text-info">Blogs</a>, where I write about <span class="fw-bold">Static Site Generators (SSGs)</span>, 
+          <span class="fw-bold">CMS platforms</span>, and my experiences implementing these technologies. Each blog showcases in-depth research and practical insights.
+        </p>
+      </div>
+    </div>
+    <div class="text-center mt-4">
+      <a href="/project/page-1" class="btn btn-primary px-4 py-2">Explore All My Mobile Development Projects</a>
+    </div>
+  </div>
+</section>
+
+<!-- Call to Action -->
+<section class="cta-section text-center py-5 bg-dark text-white">
+  <div class="container">
+    <h3 class="mb-3">Let's Connect!</h3>
+    <p class="fs-5">
+      Interested in learning more about my work? Explore the navigation links or contact me directly using the <a href="/contactme" class="text-decoration-none text-info">Contact Me</a> form.
+    </p>
+    <a href="/README" class="btn btn-outline-light px-4 py-2 mt-3">View the Full Project Overview</a>
+  </div>
+</section>

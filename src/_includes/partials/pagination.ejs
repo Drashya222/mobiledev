@@ -1,0 +1,33 @@
+<nav aria-labelledby="my-pagination" class="d-flex justify-content-center mt-4">
+  <ol class="pagination">
+    <div class="container d-flex flex-wrap justify-content-center">
+
+      <li class="page-item">
+        <% if (pagination.href.previous) { %>
+          <a class="page-link" href="<%= pagination.href.previous %>">Previous</a>
+        <% } else { %>
+          <a class="page-link disabled">Previous</a>
+        <% } %>
+      </li>
+
+
+      <% pagination.pages.forEach(function (pageEntry, index) { %>
+        <li class="page-item">
+          <a class="page-link" href="<%= pagination.hrefs[index] %>"
+            <% if (page.url === pagination.hrefs[index]) { %> aria-current="page"<% } %>>
+            Page <%= index + 1 %>
+          </a>
+        </li>
+      <% }); %>
+
+
+      <li class="page-item">
+        <% if (pagination.href.next) { %>
+          <a class="page-link" href="<%= pagination.href.next %>">Next</a>
+        <% } else { %>
+          <a class="page-link disabled">Next</a>
+        <% } %>
+      </li>
+    </div>
+  </ol>
+</nav>

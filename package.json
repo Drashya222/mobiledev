@@ -1,0 +1,26 @@
+{
+  "name": "a1",
+  "version": "1.0.0",
+  "description": "Assignment/1",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npx @11ty/eleventy",
+    "dev": "npx @11ty/eleventy --serve"
+  },
+  "author": "Drashya Patel (100863337)",
+  "license": "ISC",
+  "dependencies": {
+    "@11ty/eleventy": "^2.0.1",
+    "@contentful/rich-text-html-renderer": "^17.0.0",
+    "@sendgrid/mail": "^8.1.4",
+    "@tryghost/admin-api": "^1.13.12",
+    "@tryghost/content-api": "^1.11.21",
+    "bootstrap": "^5.3.3",
+    "contentful": "^11.2.1",
+    "contentful-management": "^11.38.0",
+    "dotenv": "^16.4.5",
+    "markdown-it": "^14.1.0",
+    "sendgrid": "^5.2.3"
+  }
+}

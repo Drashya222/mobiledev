@@ -1,0 +1,46 @@
+---
+title: Mobile Development Projects
+layout: layouts/default.ejs
+pagination:
+  data: projectData
+  size: 3
+permalink: "project/page-<%= pagination.pageNumber + 1 %>/index.html"
+---
+
+<div class="container blog-background">
+  <div class="row justify-content-center align-items-stretch">
+    <% pagination.items.forEach((post) => { %>
+      <div class="col-sm-12 col-md-6 col-lg-4 mb-4 d-flex justify-content-center">
+        <div class="card blog-card">
+          <% if (post.images && post.images.length) { %>
+            <img src="<%= post.images[0] %>" class="card-img-top blog-image" alt="Blog Image">
+          <% } else { %>
+            <img src="../../img/contentful_logo.png" class="card-img-top blog-image" alt="Default Image">
+          <% } %>
+          
+          <div class="card-body">
+            <h2><a href="/project/<%= post.slug %>/"><%= post.title %></a></h2>
+            <p>
+              By <%= post.author %> on <%= new Date(post.publishDate).toLocaleString("en-US", {
+                year: "numeric",
+                month: "long",
+                day: "numeric",
+                hour: "2-digit",
+                minute: "2-digit",
+              }) %>
+            </p>
+            
+            <p><%- post.tags.join(", ") %></p>
+          </div>
+        </div>
+      </div>
+    <% }) %>
+  </div>
+</div>
+
+<br/>
+<%- include('_includes/partials/pagination.ejs') %>
+<br/>
+
+
+

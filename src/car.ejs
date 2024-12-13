@@ -1,0 +1,44 @@
+---
+title: My Personal Garageeeee
+layout: layouts/default.ejs
+pagination:
+  data: carsData
+  size: 12
+permalink: "cars/page-<%= pagination.pageNumber + 1 %>/index.html"
+---
+
+<div class="container-fluid vh-100">
+  <div class="row h-100">
+
+    <aside class="col-md-2 bg-light p-3 overflow-auto" id="car-sidebar">
+      <h4>Cars Filter (Sorted by Year)</h4>
+      <input
+        type="text"
+        class="form-control mb-3"
+        id="car-search"
+        placeholder="Search cars..."/>
+      <ul class="list-group" id="car-list">
+        <% 
+        // Extract unique years and sort them
+        const uniqueYears = [...new Set(carsData.map(car => car.year))].sort((a, b) => a - b);
+        uniqueYears.forEach((year) => { 
+        %>
+          <li class="list-group-item car-item" data-year="<%= year %>">
+            <%= year %>
+          </li>
+        <% }) %>
+      </ul>        
+    </aside>
+    <main class="col-md-10 overflow-auto" id="car-main">
+      <div class="container d-flex gap-4 flex-wrap" id="car-cards">
+        <% pagination.items.forEach((item) => { %>
+          <%- include('_includes/partials/cars_card.ejs', { item1: item }) %>
+        <% }) %>
+      </div>
+
+      <hr />
+
+      <%- include('_includes/partials/pagination.ejs') %>
+    </main>
+  </div>
+</div>
