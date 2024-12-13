@@ -7,7 +7,7 @@ exports.handler = async (event) => {
     const { name, phone, email, subject, message } = JSON.parse(event.body);
 
     const msg = {
-        to: ["drashya.2224@gmail.com", "adam.kunz@durhamcollege.ca"],
+        to: ["drashya.2224@gmail.com"],
         from: "drashya.patel1@dcmail.ca",
         subject: `[Contact Form] ${subject}`,
         text: `
